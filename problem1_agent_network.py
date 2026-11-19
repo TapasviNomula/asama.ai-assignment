@@ -61,7 +61,7 @@ def find_relevant_agents(author_name, post_text):
         relevance = (matches / len(agent["interests"])) * agent["score_boost"]
 
         # Only notify if relevance passes threshold (avoids spam)
-        if relevance >= 0.25:
+        if relevance >= 0.12:
             notified.append(agent)
 
     return notified
